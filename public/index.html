@@ -43,5 +43,19 @@
 
   <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
   <script src="index.js"></script>
+
+  <script>
+    window.onload = function(){
+      if( navigator.serviceWorker )
+        navigator.serviceWorker.register('./serviceworker.js');
+
+      window.addEventListener('online',  updateOnlineStatus);
+      window.addEventListener('offline', updateOnlineStatus);
+      updateOnlineStatus();
+
+      window.onhashchange = showImageList;
+
+    }
+  </script>
 </body>
 </html>
