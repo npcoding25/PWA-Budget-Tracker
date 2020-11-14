@@ -27,3 +27,5 @@ This app is fairly simple. It already shows dates in the graph for the logged tr
 ## Screenshots
  
 ![image](https://user-images.githubusercontent.com/69565347/99154039-9cd7be80-2661-11eb-9da6-9c7e54d2064d.png)
+
+Click [Here](https://limitless-thicket-35109.herokuapp.com/) to see deployed application.
