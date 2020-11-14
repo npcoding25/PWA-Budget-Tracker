@@ -1,3 +1,4 @@
+require('dotenv').config()
 const express = require("express");
 const logger = require("morgan");
 const mongoose = require("mongoose");
@@ -16,7 +17,7 @@ app.use(express.json());
 app.use(express.static("public"));
 
 mongoose.connect(
-  process.env.MONGODB_URI || 'mongodb://localhost:27017/budget',
+  process.env.MONGODB_URI || `mongodb://localhost:27017/${process.env.DB_NAME}`,
   {
     useNewUrlParser: true,
     useUnifiedTopology: true,
